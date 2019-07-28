@@ -24,7 +24,7 @@ let videos = [
     lengthInMinutes: 6,
     category: "Education",
     uploadDate: new Date("11-10-2018"),
-    tags: "javascript, loops, web development",
+    tags: "javascript , loops , web development",
     features: ["Purchased", "HD"],
     viewCount: 9004,
     rating: 4.5
@@ -79,7 +79,7 @@ let videos = [
     title: "How to use FOR EACH loop - tutorial by Tech Karo",
     lengthInMinutes: 2,
     category: "Education",
-    uploadDate: new Date("11-10-2018"),
+    uploadDate: new Date("28-07-2019"),
     tags: "javascript, loops, web development",
     features: ["Purchased", "HD"],
     viewCount: 9004,

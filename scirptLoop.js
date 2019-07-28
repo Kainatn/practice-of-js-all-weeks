@@ -64,31 +64,56 @@ videos.forEach(function (categ) {
 //7.Print titles of all videos with tag "Javascript"
 
 
+videos.forEach((maintag, index) => {
+    let str = maintag.tags;
+    let res = str.split(", ");
+    res.forEach((tag, index) => {
+        if (tag === "javascript") {
+            console.log(" titles of all videos with tag " + maintag.title);
+        }
+    });
 
-// videos.forEach(sevenFunction)
+});
 
-// function sevenFunction(item, index, arr) {
-//     let arrOfTags = videos[index].tags.split(", ");
-//     for (let i = 0; i < arrOfTags.length; i++) {
-//         if (arrOfTags[i] === "javascript") {
-//             console.log(videos[index].title);
-//         }
-//     }
+//8.Print titles of all videos with HD feature
 
-// }
+videos.forEach((mainntag, index) => {
 
+    made = mainntag.features;
 
-for(let i=0; i<videos.length; i++){
- let str =videos[i].tags;
- let res =str.split(" , ");
- console.log(res); 
- for(j=0; j<res.length; j++){
+    made.forEach((feit, index) => {
+        if (feit === "HD") {
+            console.log(" titles of all videos with HD feature " + mainntag.title);
+        }
+    });
+});
 
-    console.log(res[j].title); 
-    //  if(res[j] === "javascript"){
-    //     console.log(res[j].title); 
-    //  }
- }
-     
+//9.Print titles of all videos uploaded today
+let today = new Date();
+let dd = today.getDate();
+
+let mm = today.getMonth() + 1;
+let yyyy = today.getFullYear();
+if (dd < 10) {
+    dd = '0' + dd;
 }
 
+if (mm < 10) {
+    mm = '0' + mm;
+}
+today = mm + '-' + dd + '-' + yyyy;
+console.log(today);
+videos.forEach(find => {
+   uDate= find.uploadDate;
+   uDate.forEach(upload => {
+       if(upload == today){
+        console.log(" titles of all videos uploaded today " + find.title);
+       }
+   });
+});
+
+//10.Print titles of all videos uploaded this week
+//11.Print titles of all videos uploaded this month
+//12.Print titles of all videos uploaded this year
+//13.Sort the array in ascending order of number of views and print the titles
+//14.Sort the array in ascending order of rating and print the titles
